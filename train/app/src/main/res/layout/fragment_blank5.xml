@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlankFragment5">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <!-- 选择县市的 Spinner -->
+    <Spinner
+        android:id="@+id/spinner7"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="縣市"
+        android:layout_gravity="top|center_horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginTop="100dp" />
+    <!-- 选择县市对应车站的 Spinner -->
+    <Spinner
+        android:id="@+id/spinner9"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="車站"
+        android:layout_gravity="top|center_horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginTop="150dp" />
+
+
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:inputType="date"
+        android:layout_gravity="top|center_horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginTop="200dp"
+        android:visibility="visible" />
+    <EditText
+        android:id="@+id/timeEditText"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:inputType="time"
+        android:layout_gravity="top|center_horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginTop="250dp"
+        android:visibility="visible" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="300dp"
+        android:text="搜尋" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="50dp" />
+
+</FrameLayout>

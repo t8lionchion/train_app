@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/stationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Station"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/arriveTimeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Arrival Time"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="#000"/>
+</LinearLayout>

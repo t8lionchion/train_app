@@ -1,0 +1,67 @@
+-- 建立資料庫
+CREATE DATABASE IF NOT EXISTS `Date_train`;
+USE `Date_train`;
+
+-- 建立 table1
+CREATE TABLE IF NOT EXISTS `table1` (
+    `train_number` INT NOT NULL,
+    `Vehicles` VARCHAR(100) NOT NULL,
+    PRIMARY KEY (`train_number`)
+);
+
+-- 建立 table2
+CREATE TABLE IF NOT EXISTS `table2` (
+    `train_number` INT NOT NULL,
+    `start_station` VARCHAR(20) NOT NULL,
+    `start_time` TIME NOT NULL,
+    `end_station` VARCHAR(20) NOT NULL,
+    `end_time` TIME NOT NULL,
+    PRIMARY KEY (`train_number`),
+    CONSTRAINT `fk_train_number_2` FOREIGN KEY (`train_number`) REFERENCES `table1`(`train_number`),
+    UNIQUE KEY `unique_train_number` (`train_number`)  
+);
+
+-- 建立 table3
+CREATE TABLE IF NOT EXISTS `table3` (
+    `train_number` INT NOT NULL,
+    `station` VARCHAR(20) NOT NULL,
+    `arrive_time` TIME NOT NULL,
+    `StopSequence`INT NOT NULL,
+    PRIMARY KEY (`train_number`,`station`),
+    CONSTRAINT `fk_train_number_3` FOREIGN KEY (`train_number`) REFERENCES `table1`(`train_number`)
+);
+
+-- 查看 table1 內容
+SELECT * FROM `table1`;
+
+SELECT COUNT(*) FROM `table1`;
+
+-- 查看 table2 內容
+SELECT * FROM `table2`;
+SELECT COUNT(*) FROM `table2`;
+
+-- 查看 table3 內容
+SELECT * FROM `table3`;
+SELECT COUNT(*) FROM `table3`;
+-- 清空 table1
+DELETE FROM table1;
+
+-- 清空 table2
+DELETE FROM table2;
+
+-- 清空 table3
+DELETE FROM table3;
+
+-- 刪除 table2 的外鍵約束
+ALTER TABLE `table2` DROP FOREIGN KEY `fk_train_number_2`;
+
+-- 刪除 table1
+DROP TABLE IF EXISTS `table1`;
+-- 刪除 table2
+DROP TABLE IF EXISTS `table2`;
+
+-- 刪除 table3
+DROP TABLE IF EXISTS `table3`;
+
+ALTER TABLE `table1`
+MODIFY COLUMN `Vehicles` VARCHAR(100) NOT NULL;

@@ -1,0 +1,53 @@
+車次查詢;
+API地址： http://127.0.0.1:5000/train_info?train_number=<your_train_number>
+api_key = "123456789"
+GET
+import requests
+
+車站查詢
+# API端点
+API地址= 'http://127.0.0.1:5002/api/search'
+
+# API密钥
+API_KEY = 'b123456789'
+
+POST
+# 测试数据
+data = {
+    'start_station': '板橋',
+    'end_station': '彰化',
+    'specified_time': '04:00'
+}
+
+# 设置请求头
+headers = {'API-Key': API_KEY}
+
+# 发送POST请求
+response = requests.post(API_ENDPOINT, json=data, headers=headers)
+
+# 打印响应
+print(response.json())
+
+路線
+# API端点
+url = 'http://127.0.0.1:5001/train_info'
+
+# 設置API密鑰
+headers = {'API-Key': 'a123456789'}
+
+GET
+# 傳遞參數
+params = {'station': station, 'time': time}
+
+# 發送GET請求
+response = requests.get(url, headers=headers, params=params)
+
+# 檢查響應狀態碼
+if response.status_code == 200:
+    # 打印API響應的JSON檔案
+    print(response.json())
+else:
+    # 打印錯誤信息
+    print('Error:', response.json())
+
+

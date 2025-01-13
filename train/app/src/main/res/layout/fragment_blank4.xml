@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlankFragment4">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <EditText
+        android:id="@+id/trainText3"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:layout_gravity="top|center_horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginTop="100dp"
+        android:visibility="visible" />
+    <EditText
+        android:id="@+id/dateEditText3"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:inputType="date"
+        android:layout_gravity="top|center_horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginTop="150dp"
+        android:visibility="visible" />
+    <EditText
+        android:id="@+id/timeEditText3"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:inputType="time"
+        android:layout_gravity="top|center_horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginTop="200dp"
+        android:visibility="visible" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="250dp"
+        android:text="搜尋" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="50dp" />
+
+</FrameLayout>
